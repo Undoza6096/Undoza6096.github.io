@@ -11,7 +11,7 @@ var authors = "Undoza6096";
 var version = 1.0;
 
 var currency;
-var c1, c2, a1, q1;
+var c1, c2, a1, a2;
 var c1Exp, c2Exp;
 
 var achievement1, achievement2;
@@ -43,7 +43,7 @@ var init = () => {
     // a1
     {
         let getDesc = (level) => "a_1=" + getA1(level).toString(0);
-        a1 = theory.createUpgrade(0, currency, new FirstFreeCost(new ExponentialCost(1500, Math.log2(2.2))));
+        a1 = theory.createUpgrade(2, currency, new FirstFreeCost(new ExponentialCost(1500, Math.log2(2.2))));
         a1.getDescription = (_) => Utils.getMath(getDesc(a1.level));
         a1.getInfo = (amount) => Utils.getMathTo(getDesc(a1.level), getDesc(a1.level + amount));
     }
@@ -51,7 +51,7 @@ var init = () => {
     // a2
     {
         let getDesc = (level) => "a_2=" + getA2(level).toString(0);
-        a2 = theory.createUpgrade(0, currency, new FirstFreeCost(new ExponentialCost(BigNumber.from("1e69420"), Math.log2(2.2))));
+        a2 = theory.createUpgrade(3, currency, new FirstFreeCost(new ExponentialCost(BigNumber.from("1e69420"), Math.log2(2.2))));
         a2.getDescription = (_) => Utils.getMath(getDesc(a2.level));
         a2.getInfo = (amount) => Utils.getMathTo(getDesc(a2.level), getDesc(a2.level + amount));
     }
