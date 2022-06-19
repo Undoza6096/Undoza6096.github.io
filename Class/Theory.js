@@ -5,10 +5,10 @@ import { theory } from "./api/Theory";
 import { Utils } from "./api/Utils";
 
 var id = "my_custom_theory_id";
-var name = "My Custom Theory";
+var name = "My Theory";
 var description = "A basic theory.";
-var authors = "Gilles-Philippe Paillé";
-var version = 1;
+var authors = "Undoza6096";
+var version = 1.0;
 
 var currency;
 var c1, c2, a1, q1;
